@@ -1,0 +1,13 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+# Datatypes 
+TextGraph	KEYWORD1
+
+# Methods and Functions 
+dotGraph	KEYWORD2
+barGraph	KEYWORD2
+barGraphSameLine	KEYWORD2
+spc	KEYWORD2
+
