@@ -27,7 +27,6 @@
 TextGraph tg(1);            // create an instance of TextGraph named "tg"
 
 
-// -----------------------------------------------------------------------
 void setup(void) {
     int t0 = millis();
     Serial.begin(115200);   // set preferred baudrate
@@ -56,3 +55,4 @@ void loop(void) {
     t = t + tstep;
     delay(200);                       // control output rate to screen
 }
+

@@ -53,7 +53,6 @@ void setup(void) {
 }
 
 
-/// -----------------------------------------------------------------------
 void loop(void) {
     char cbuf[16];                          // container to hold formatted number
     static float tstep = 0.01;
@@ -71,3 +70,4 @@ void loop(void) {
     t = t + tstep;
     delay(200);                             // set the update rate to screen
 }
+
