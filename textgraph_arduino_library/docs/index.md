@@ -1,5 +1,0 @@
-Docs
-
-#  Textgraph
-
-## into about
