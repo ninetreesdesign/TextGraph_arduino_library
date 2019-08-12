@@ -29,6 +29,7 @@ TextGraph tg(1);            // create an instance of TextGraph named "tg"
 
 // -----------------------------------------------------------------------
 void setup(void) {
+    int t0 = millis();
     Serial.begin(115200);   // set preferred baudrate
     while (!Serial && (millis() - t0 < 5000)) {
         ; // wait for port to connect or skip after timeout. Req'd on arduinos with USB port systems
@@ -49,8 +50,9 @@ void loop(void) {
     Serial.print(cbuf);               // print the actual function's value
 
     // scale function to fit Monitor window: set window at least as wide as graph range
-    y_scaled = 50 * y + 50;
-    tg.dotGraph(y_scaled);            // dotGraph function, simplest form
+    y_scaled = map(y, -1,1,1,50);  // 50 * y + 50;
+    // tg.dotGraph(y_scaled);            // dotGraph function, simplest form
+    tg.dotGraph(y_scaled,'o');        // dotGraph function, change dot character
     t = t + tstep;
     delay(200);                       // control output rate to screen
 }
